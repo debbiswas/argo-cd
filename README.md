@@ -15,21 +15,26 @@ Change "service/argocd-server" type as NodePort from ClusterIP
 
 kubectl edit service/argocd-server -n argocd
 
+
 root@k8s-master:~# kubectl describe service/argocd-server -n argocd | grep -i type
 Type:                     NodePort
 root@k8s-master:~#
 
+
 Get argocd-server service details
+
 
 root@k8s-master:~# kubectl get service/argocd-server -n argocd
 NAME            TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)                      AGE
 argocd-server   NodePort   10.98.167.82   <none>        80:32659/TCP,443:30441/TCP   39m
 root@k8s-master:~#
 
+
   
 Access argocd Web UI using any of the worker node IP address and argocd-server port 32659 which redirect to https port 30441 
   
 Get Worker node IP adress 
+
   
 root@k8s-master:~# kubectl get nodes -o wide
 NAME         STATUS   ROLES                  AGE    VERSION   INTERNAL-IP      EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
@@ -40,6 +45,7 @@ root@k8s-master:~#
 
 
 Argo-cd Web UI  : http://192.168.29.207:32659 
+
 
 User: admin
 
