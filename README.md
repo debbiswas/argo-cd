@@ -3,6 +3,8 @@ argo-cd demo
 
 Install Argo-cd - following steps to install argo-cd in your kubernetes cluster
 
+Follow :  https://github.com/argoproj/argo-cd/releases
+
 kubectl create namespace argocd
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.1.0-rc3/manifests/install.yaml
