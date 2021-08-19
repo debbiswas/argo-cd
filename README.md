@@ -7,7 +7,7 @@ kubectl create namespace argocd
 
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.1.0-rc3/manifests/install.yaml
 
-Check all install component 
+Check all the installed components 
 
 kubectl get all -n argocd
 
